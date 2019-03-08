@@ -8,8 +8,22 @@ namespace CompanyClasses
         // Can make its on file
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //Console.WriteLine(Company());
+            // Make a new comany
+            var ColDotCom = new Company("Colliers.com");
+
+            // Define new employees
+            var tom = new Employee("Tom", "Idiot", new DateTime());
+            var john = new Employee("John", "Smart", new DateTime());
+            var tate = new Employee("Tate", "Just ok", new DateTime());
+
+            // Add the new employees
+            ColDotCom.AddEmployee(tom);
+            ColDotCom.AddEmployee(john);
+            ColDotCom.AddEmployee(tate);
+
+            // ColDotCom.AllEmployees();
+            Console.ReadKey();
+         
         }
 
 
@@ -55,6 +69,7 @@ namespace CompanyClasses
                 {
                     Console.WriteLine($"Name: {emp.EmployeeName}" + $"Job: {emp.JobTitle}" + $"Start Date: {emp.StartDate}");
                 }
+                return;
             }
         }
 
