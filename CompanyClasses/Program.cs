@@ -15,13 +15,20 @@ namespace CompanyClasses
             var tom = new Employee("Tom", "Idiot", new DateTime());
             var john = new Employee("John", "Smart", new DateTime());
             var tate = new Employee("Tate", "Just ok", new DateTime());
+            var remOve = new Employee("Mr Remove", "No Body", new DateTime());
+
 
             // Add the new employees
             ColDotCom.AddEmployee(tom);
             ColDotCom.AddEmployee(john);
             ColDotCom.AddEmployee(tate);
+            ColDotCom.AddEmployee(remOve);
 
-            // ColDotCom.AllEmployees();
+            // Remove an employee
+
+            ColDotCom.RemoveEmployee(remOve);
+
+            ColDotCom.AllEmployees();
             Console.ReadKey();
          
         }
